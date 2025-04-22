@@ -1,7 +1,8 @@
-import { Model, DataTypes, Sequelize } from "sequelize";
+import { DataTypes, Model, Sequelize } from "sequelize";
 
 export class CategoryPersistence extends Model {
     declare id: string
+    declare status: string
 }
 
 export const modelName = "Category"
@@ -39,7 +40,7 @@ export function init(sequelize: Sequelize) {
         sequelize,
         modelName: modelName,
         timestamps: true,
-        paranoid: true,
+        paranoid: false,
         createdAt: "created_at",
         updatedAt: "updated_at",
         tableName: "categories",

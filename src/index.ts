@@ -1,7 +1,8 @@
 import express, { Request, Response } from "express";
 import dotenv from "dotenv";
-import setUpCategoryModule from "./modules/category";
+
 import sequelize from "./share/components/sequelize";
+import { setUpCategoryModule } from "./modules/category";
 
 dotenv.config();
 
